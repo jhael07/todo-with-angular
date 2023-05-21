@@ -9,4 +9,5 @@ export class TaskItemComponent {
   @Input() title?: string;
   @Input() description?: string;
   @Input() index?: number;
+  @Input() status?: boolean;
 }

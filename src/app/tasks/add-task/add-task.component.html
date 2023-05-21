@@ -6,14 +6,15 @@
       type="text"
       placeholder="Task Title"
       class="p-1.5 focus:outline-red-300 w-3/4 border border-gray-300"
-      required
       [(ngModel)]="task.title"
+      value="task.title"
     />
     <input
       type="text"
       placeholder="Description"
       class="p-1.5 focus:outline-red-300 w-3/4 border border-gray-300"
       [(ngModel)]="task.description"
+      value="task.description"
     />
     <button
       type="submit"

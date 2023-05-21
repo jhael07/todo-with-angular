@@ -11,6 +11,7 @@
     *ngFor="let task of tasks; let i = index"
     [title]="task.title"
     [description]="task.description"
+    [status]="task.status"
     [index]="i"
   ></app-task-item>
 </div>

@@ -2,10 +2,28 @@
   class="w-5/6 flex m-auto border my-4 border-gray-500 p-2 rounded bg-sky-300 relative"
 >
   <div class="p-2">
-    <h2 class="text-2xl font-semibold">{{ title }}</h2>
-    <p class="mt-2">
+    <h2
+      class="text-2xl font-semibold"
+      [ngClass]="
+        status === true
+          ? 'text-gray-100 line-through
+      '
+          : ''
+      "
+    >
+      {{ title }}
+    </h2>
+    <p
+      class="mt-2"
+      [ngClass]="
+        status === true
+          ? 'text-gray-100 line-through
+  '
+          : ''
+      "
+    >
       {{ description }}
     </p>
   </div>
-  <app-task-option [index]="index"></app-task-option>
+  <app-task-option [index]="index" [status]="status"></app-task-option>
 </div>

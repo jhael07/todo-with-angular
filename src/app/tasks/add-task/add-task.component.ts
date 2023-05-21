@@ -11,9 +11,18 @@ export class AddTaskComponent {
 
   constructor(private service: TaskService) {}
 
+  clearInputs() {
+    this.task.title = '';
+    this.task.description = '';
+  }
+
   // * CREATE A NEW TASK
   addTask(): void {
-    console.log(this.task.title, this.task.description);
-    this.service.addTask(this.task.title, this.task.description);
+    const { title, description } = this.task;
+
+    if (!title) alert('Please fill out the title input.');
+    else this.service.addTask(title, description);
+
+    this.clearInputs();
   }
 }

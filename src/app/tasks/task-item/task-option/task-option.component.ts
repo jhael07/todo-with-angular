@@ -8,13 +8,17 @@ import { TaskService } from 'src/app/services/task.service';
 })
 export class TaskOptionComponent {
   @Input() index?: number;
+  @Input() status?: boolean;
 
   constructor(private service: TaskService) {}
 
-  deleteTask(index: number) {
-    const arrOriginal = this.service.tasks;
-    const newArr = arrOriginal.splice(index, index - 1);
+  completeTask(index: any) {
+    this.service.tasks[index].status = !this.service.tasks[index].status;
+    console.log(this.service.tasks);
+  }
 
-    this.service.tasks = newArr;
+  deleteTask(index: any) {
+    const arrOriginal = this.service.tasks;
+    arrOriginal.splice(index, 1);
   }
 }
