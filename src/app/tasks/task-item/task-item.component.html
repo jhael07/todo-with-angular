@@ -2,14 +2,10 @@
   class="w-5/6 flex m-auto border my-4 border-gray-500 p-2 rounded bg-sky-300 relative"
 >
   <div class="p-2">
-    <h2 class="text-2xl font-semibold">Task Title</h2>
+    <h2 class="text-2xl font-semibold">{{ title }}</h2>
     <p class="mt-2">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi facere
-      debitis sequi architecto fugiat natus cum ab! Illo, quam expedita,
-      adipisci quia quisquam ipsa error quas asperiores natus eos modi? adipisci
-      quia quisquam ipsa error quas asperiores natus eos modi? adipisci quia
-      quisquam ipsa error quas asperiores natus eos modi?
+      {{ description }}
     </p>
   </div>
-  <app-task-option></app-task-option>
+  <app-task-option [index]="index"></app-task-option>
 </div>

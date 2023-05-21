@@ -7,5 +7,10 @@
 
 <div class="w-full py-4 rounded">
   <app-add-task></app-add-task>
-  <app-task-item *ngFor="let n of [1, 2, 3, 4]"></app-task-item>
+  <app-task-item
+    *ngFor="let task of tasks; let i = index"
+    [title]="task.title"
+    [description]="task.description"
+    [index]="i"
+  ></app-task-item>
 </div>
