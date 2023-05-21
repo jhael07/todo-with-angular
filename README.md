@@ -1,6 +1,4 @@
 # WELCOME TO MY FIRST TODO LIST WITH ANGULAR
-# Project url:
-https://angular-todo-jhael.netlify.app/
 # Purpose 
 Learn angular and practice all the concepst that i have learned so far.
 # Angular features use in this project:
@@ -9,6 +7,8 @@ Learn angular and practice all the concepst that i have learned so far.
 - Service injection
 - Structural diretives, such as *ngFor and *ngIf
 - ngClass
+- # Project url:
+https://angular-todo-jhael.netlify.app/
 
 
 
