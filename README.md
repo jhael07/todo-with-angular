@@ -1,4 +1,6 @@
 # WELCOME TO MY FIRST TODO LIST WITH ANGULAR
+# Project url:
+https://angular-todo-jhael.netlify.app/
 # Purpose 
 Learn angular and practice all the concepst that i have learned so far.
 # Angular features use in this project:
