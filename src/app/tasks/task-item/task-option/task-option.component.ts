@@ -13,14 +13,12 @@ export class TaskOptionComponent {
   constructor(private service: TaskService) {}
 
   // * 👇 Esta funcion llama a completeTask que pertenece a TaskService
-  completeTaskService(index?: number): void {
-    const { completeTask } = this.service;
-    completeTask(index);
+  completeTaskService(): void {
+    this.service.completeTask(this.index);
   }
 
   // * 👇 Esta funcion llama a deleteTask que pertenece a TaskService
-  deleteTaskService(index?: number): void {
-    const { deleteTask } = this.service;
-    deleteTask(index);
+  deleteTaskService(): void {
+    this.service.deleteTask(this.index);
   }
 }

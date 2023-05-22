@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class TaskService {
-  tasks = [
+  public tasks = [
     {
       title: 'Eat',
       description: 'I will like to eat a Sandwich.',
@@ -21,8 +21,9 @@ export class TaskService {
 
   completeTask(index?: number) {
     // * 👇 This code change the status
-    if (typeof index === 'number')
+    if (typeof index === 'number') {
       this.tasks[index].status = !this.tasks[index].status;
+    }
   }
 
   deleteTask(index?: number) {

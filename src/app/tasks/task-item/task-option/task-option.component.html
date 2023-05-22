@@ -1,7 +1,7 @@
 <div class="options__container">
   <!-- prettier-ignore -->
-  <p class="options-effect" (click)="completeTaskService(index)" *ngIf="status === false">✅</p>
+  <p class="options-effect" (click)="completeTaskService()" *ngIf="status === false">✅</p>
   <!-- prettier-ignore -->
-  <p class="options-effect" (click)="completeTaskService(index)" *ngIf="status === true">🙌</p>
-  <p class="options-effect" (click)="deleteTaskService(index)">🗑️</p>
+  <p class="options-effect" (click)="completeTaskService()" *ngIf="status === true">🙌</p>
+  <p class="options-effect" (click)="deleteTaskService()">🗑️</p>
 </div>
