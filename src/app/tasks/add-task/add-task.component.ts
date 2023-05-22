@@ -16,13 +16,12 @@ export class AddTaskComponent {
     this.task.description = '';
   }
 
-  // * CREATE A NEW TASK
   addTask(): void {
-    const { title, description } = this.task;
+    // * 👇 This alert that is trigger if the title input is not fill else it adds the task
+    if (!this.task.title) alert('Please fill out the title input.');
+    if (this.task) this.service.addTask(this.task.title, this.task.description);
 
-    if (!title) alert('Please fill out the title input.');
-    else this.service.addTask(title, description);
-
+    // * 👇 This clears the inputs if the task has been added
     this.clearInputs();
   }
 }

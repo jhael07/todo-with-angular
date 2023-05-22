@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class TaskService {
-  public tasks = [
+  tasks = [
     {
       title: 'Eat',
       description: 'I will like to eat a Sandwich.',

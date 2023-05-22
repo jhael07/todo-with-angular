@@ -1,14 +1,12 @@
 <div
-  class="w-5/6 flex m-auto border my-4 border-gray-500 p-2 rounded bg-sky-300 relative"
+  class="w-5/6 flex m-auto border my-7 border-gray-500 p-2 rounded relative"
+  [ngClass]="status === true ? 'bg-gray-400' : 'bg-sky-400'"
 >
   <div class="p-2">
     <h2
-      class="text-2xl font-semibold"
+      class="text-2xl font-semibold text-gray-100 bg-blue-950 w-fit px-3 py-1 rounded"
       [ngClass]="
-        status === true
-          ? 'text-gray-100 line-through
-      '
-          : ''
+        status === true ? 'text-gray-100 line-through bg-gray-600' : ''
       "
     >
       {{ title }}
