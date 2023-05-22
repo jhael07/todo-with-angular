@@ -1,24 +1,7 @@
-<div
-  class="flex hover:cursor-pointer justify-between gap-3 absolute right-4 bg-white rounded p-0.5 border"
->
-  <p
-    class="hover:scale-110 hover:transition transition"
-    (click)="completeTask(index)"
-    *ngIf="status === false"
-  >
-    ✅
-  </p>
-  <p
-    class="hover:scale-110 hover:transition transition"
-    (click)="completeTask(index)"
-    *ngIf="status === true"
-  >
-    🙌
-  </p>
-  <p
-    class="hover:scale-110 hover:transition transition"
-    (click)="deleteTask(index)"
-  >
-    🗑️
-  </p>
+<div class="options__container">
+  <!-- prettier-ignore -->
+  <p class="options-effect" (click)="completeTaskService(index)" *ngIf="status === false">✅</p>
+  <!-- prettier-ignore -->
+  <p class="options-effect" (click)="completeTaskService(index)" *ngIf="status === true">🙌</p>
+  <p class="options-effect" (click)="deleteTaskService(index)">🗑️</p>
 </div>
