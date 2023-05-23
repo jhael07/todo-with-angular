@@ -20,5 +20,12 @@ export class TaskOptionComponent {
   // * 👇 Esta funcion llama a deleteTask que pertenece a TaskService
   deleteTaskService(): void {
     this.service.deleteTask(this.index);
+    const userTasks = localStorage.getItem('tasks');
+    if (userTasks) {
+      if (this.index) {
+        this.service.tasks.splice(this.index, 1);
+        localStorage.setItem('tasks', JSON.stringify(this.service.tasks));
+      }
+    }
   }
 }

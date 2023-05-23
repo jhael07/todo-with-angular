@@ -26,18 +26,25 @@ export class AddTaskComponent {
     if (session) {
       const userTasks = localStorage.getItem('tasks');
       let tasksArr: object[];
+
       if (userTasks) {
         tasksArr = JSON.parse(userTasks);
-        tasksArr.push(this.task);
+        tasksArr.push({
+          title: this.task.title,
+          description: this.task.description,
+          status: false,
+        });
         localStorage.setItem('tasks', JSON.stringify(tasksArr));
       } else {
         localStorage.setItem(
           'tasks',
-          JSON.stringify({
-            title: this.task.title,
-            description: this.task.description,
-            status: false,
-          })
+          JSON.stringify([
+            {
+              title: this.task.title,
+              description: this.task.description,
+              status: false,
+            },
+          ])
         );
       }
     }

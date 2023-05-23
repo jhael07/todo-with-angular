@@ -9,7 +9,7 @@ import { TaskService } from '../services/task.service';
 export class TasksComponent {
   constructor(private TaskService: TaskService) {
     if (localStorage.getItem('session')) {
-      this.getUserTasks(  );
+      this.getUserTasks();
     }
   }
 
