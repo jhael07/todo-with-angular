@@ -34,6 +34,6 @@ export class SigninComponent {
 
     setTimeout(() => {
       window.location.href = '/';
-    }, 4000);
+    }, 2000);
   }
 }

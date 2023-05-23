@@ -1,12 +1,27 @@
 <div class="flex w-full p-4 bg-black text-white relative items-center">
   <h1 class="m-auto text-xl md:text-xl lg:text-3xl xl:text-3xl">
-    Welcome to the todo list app with
-    <span class="text-white bg-red-600 px-2 pb-1 rounded-xl">Angular</span>
+    <div *ngIf="!account; else userMessage">
+      Welcome to the todo list app with
+      <span class="text-white bg-red-600 px-2 pb-1 rounded-xl">Angular</span>
+    </div>
+    <ng-template #userMessage>
+      Welcome to the todo list app
+      <span class="text-white bg-red-600 px-2 pb-1 rounded-xl">{{
+        getUserName()
+      }}</span>
+    </ng-template>
   </h1>
   <ul
     class="flex w-32 justify-between items-center sm:flex md:flex lg:flex xl:flex"
   >
-    <a routerLink="signin">Sign in</a>
-    <a>Register</a>
+    <a
+      *ngIf="!account; else logout"
+      routerLink="signin"
+      class="hover:cursor-pointer"
+      >Sign in</a
+    >
+    <ng-template #logout>
+      <a (click)="logoutFn()" class="hover:cursor-pointer">Logout</a>
+    </ng-template>
   </ul>
 </div>

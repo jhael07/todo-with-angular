@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 export class HomeComponent {
   title = 'review';
 
-  ngOnInit() {
+  constructor() {
     if (!localStorage.getItem('session')) {
       Swal.fire(
         'Please Sign in',

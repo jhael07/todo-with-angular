@@ -7,6 +7,19 @@ import { TaskService } from '../services/task.service';
   styleUrls: ['./tasks.component.css'],
 })
 export class TasksComponent {
-  constructor(private TaskService: TaskService) {}
+  constructor(private TaskService: TaskService) {
+    if (localStorage.getItem('session')) {
+      this.getUserTasks(  );
+    }
+  }
+
   tasks = this.TaskService.tasks;
+
+  getUserTasks() {
+    const userTasks = localStorage.getItem('tasks');
+    if (userTasks) {
+      let tasksArr = JSON.parse(userTasks);
+      this.tasks.push(...tasksArr);
+    }
+  }
 }
