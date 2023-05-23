@@ -1,0 +1,30 @@
+.singin__container {
+  @apply flex m-auto mt-3 rounded-lg p-2 w-full sm:w-5/6 py-8;
+}
+
+.signin__btn-back {
+  @apply absolute bg-green-600 p-2 rounded text-white hover:bg-green-700;
+}
+
+.signin__content {
+  @apply bg-white shadow-xl border-2 mt-3 rounded-xl p-2 m-auto w-[28rem]
+         sm:w-[28rem] md:w-2/4 lg:w-[28rem] py-8;
+}
+
+.signin__title {
+  @apply flex mt-4 text-3xl m-auto w-fit mb-4;
+}
+
+.signin__container-input {
+  @apply w-5/6 mt-1 grid m-auto mb-3.5;
+}
+
+.singin__label {
+  @apply text-sm mb-2 font-medium w-11/12 m-auto;
+}
+
+.signin__input {
+  @apply p-1.5 rounded outline-none m-auto w-11/12 text-lg border-2 pl-5;
+}
+
+

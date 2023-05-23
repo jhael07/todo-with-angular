@@ -1,28 +1,33 @@
-<div class="flex m-auto mt-3 rounded-lg p-2 w-3/4 bg-gray-100 py-8">
-  <button
-    class="absolute bg-green-600 p-2 rounded text-white hover:bg-green-700"
-    routerLink=""
-  >
-    ⬅ Go Home
-  </button>
-  <div
-    class="bg-white shadow-xl border-2 mt-3 rounded-xl p-2 m-auto w-full sm:w-2/4 py-8"
-  >
-    <h1 class="flex mt-4 text-3xl m-auto w-fit">Login</h1>
+<div class="singin__container">
+  <button class="signin__btn-back" routerLink="">Go Home</button>
+  <div class="signin__content">
+    <h1 class="signin__title">Login</h1>
     <div class="grid w-full m-auto p-3">
-      <label class="text-xl ml-10 my-5">Username:</label>
-      <input
-        type="text"
-        class="p-2 rounded border outline-none m-auto w-5/6"
-        placeholder="Type your username"
-      /><label class="text-xl ml-10 mt-6 mb-3">Password:</label>
-      <input
-        type="text"
-        class="p-2 rounded border outline-none m-auto w-5/6"
-        placeholder="Type your username"
-      />
+      <div class="signin__container-input">
+        <label class="singin__label">Username</label>
+        <input
+          type="text"
+          class="signin__input"
+          placeholder="Username"
+          [(ngModel)]="username"
+        />
+      </div>
+      <div class="signin__container-input">
+        <label class="singin__label">Password:</label>
+        <input
+          type="password"
+          class="signin__input"
+          placeholder="Password"
+          [(ngModel)]="password"
+        />
+      </div>
 
-      <button class="bg-green-500 text-white p-2 w-3/5 m-auto mt-10 rounded">
+      <a href="" class="mt-6 m-auto text-sm">Forgot password?</a>
+
+      <button
+        class="bg-green-500 text-white p-1 py-2.5 w-3/6 sm:w-3/6 lg:w-3/6 md:w-3/6 xl:w-3/6 m-auto mt-6 rounded-md hover:bg-green-600 transition hover:transition"
+        (click)="validation()"
+      >
         Sign in
       </button>
     </div>
