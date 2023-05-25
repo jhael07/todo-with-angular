@@ -15,12 +15,11 @@ export class NavbarComponent {
 
   getUserName(): string {
     let user: { username: '' };
+    // * 👇 Check if the account session is active
     if (this.account) {
-      user = JSON.parse(this.account);
-
-      return user.username;
+      user = JSON.parse(this.account); // * 👈 Convert the json into js object
+      return user.username; // * 👈 Return the username
     }
-
-    return '';
+    return ''; // * If there is not account session it returns an empty string
   }
 }

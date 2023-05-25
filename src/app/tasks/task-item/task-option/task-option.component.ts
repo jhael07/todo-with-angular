@@ -23,7 +23,7 @@ export class TaskOptionComponent {
     const userTasks = localStorage.getItem('tasks');
     if (userTasks) {
       if (this.index) {
-        this.service.tasks.splice(this.index, 1);
+        this.service.tasks.splice(this.index, 0);
         localStorage.setItem('tasks', JSON.stringify(this.service.tasks));
       }
     }

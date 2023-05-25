@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TaskService } from 'src/app/services/task.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-task',
@@ -20,7 +21,10 @@ export class AddTaskComponent {
     const session = localStorage.getItem('session');
 
     // * 👇 This alert that is trigger if the title input is not fill else it adds the task
-    if (!this.task.title) alert('Please fill out the title input.');
+    if (!this.task.title) {
+      Swal.fire('Error', 'Please fill out the title input.', 'error');
+      return;
+    }
     if (this.task) this.service.addTask(this.task.title, this.task.description);
 
     if (session) {

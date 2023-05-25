@@ -19,7 +19,11 @@ export class TasksComponent {
     const userTasks = localStorage.getItem('tasks');
     if (userTasks) {
       let tasksArr = JSON.parse(userTasks);
-      this.tasks.push(...tasksArr);
+
+      if (tasksArr.length > 1) {
+        this.tasks.shift();
+        this.tasks.push(...tasksArr);
+      }
     }
   }
 }

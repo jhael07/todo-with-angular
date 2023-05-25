@@ -10,7 +10,7 @@ export class TaskCounterComponent {
   constructor(private service: TaskService) {}
 
   getAllTasks(): number {
-    return this.service.tasks.length;
+    return this.service.tasks.length - 1;
   }
 
   getTasksDone(): string {
@@ -18,10 +18,7 @@ export class TaskCounterComponent {
     const arrTasks: Array<object> = this.service.tasks.filter(
       (task) => task.status !== false
     );
-
-    // * 👇 get the result from the array filtered
     const result: string = String(arrTasks.length).padStart(2, '0');
-
     return result;
   }
 
@@ -30,10 +27,7 @@ export class TaskCounterComponent {
     const arrTasks: Array<object> = this.service.tasks.filter(
       (task) => task.status === false
     );
-
-    // * 👇 get the result from the array filtered
-    const result: string = String(arrTasks.length).padStart(2, '0');
-
+    const result: string = String(arrTasks.length - 1).padStart(2, '0');
     return result;
   }
 }

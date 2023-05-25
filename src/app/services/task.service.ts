@@ -23,6 +23,7 @@ export class TaskService {
     // * 👇 This code change the status
     if (typeof index === 'number') {
       this.tasks[index].status = !this.tasks[index].status;
+      localStorage.setItem('tasks', JSON.stringify(this.tasks));
     }
   }
 

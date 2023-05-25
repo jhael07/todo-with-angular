@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
@@ -13,11 +12,8 @@ import { TaskService } from './services/task.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
-
-const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'signin', component: SigninComponent },
-];
+import { AppRoutingModule } from './app-routing.module';
+import { ParamsComponent } from './params/params.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +26,9 @@ const routes: Routes = [
     NavbarComponent,
     SigninComponent,
     HomeComponent,
+    ParamsComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [TaskService],
   bootstrap: [AppComponent],
 })

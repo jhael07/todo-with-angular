@@ -10,4 +10,6 @@ export class TaskItemComponent {
   @Input() description?: string;
   @Input() index?: number;
   @Input() status?: boolean;
+
+  SessionActive = localStorage.getItem('session');
 }
